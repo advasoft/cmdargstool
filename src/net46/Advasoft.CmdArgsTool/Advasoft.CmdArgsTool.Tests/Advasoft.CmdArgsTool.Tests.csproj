@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Advasoft.CmdArgsTool\Advasoft.CmdArgsTool.csproj">
+      <Project>{42ef6577-6b0c-4a61-a885-a9cc9ad28b81}</Project>
+      <Name>Advasoft.CmdArgsTool</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
