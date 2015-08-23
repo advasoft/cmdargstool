@@ -5,7 +5,7 @@ namespace Advasoft.CmdArgsTool
 {
     public abstract class OptionsFactoryBase
     {
-        protected IOptionsPolicy _creationPolicy;
+        private IOptionsPolicy _creationPolicy;
         private ILogger _logger;
 
         protected OptionsFactoryBase(IOptionsPolicy creationPolicy, ILogger logger)
