@@ -14,21 +14,21 @@ namespace Advasoft.CmdArgsTool
             _logger = logger;
         }
 
+        protected abstract OptionsBase CreateOptionsByPolicy(string[] cmdArgsArray,
+            IOptionsPolicy creationPolicy);
+
         public OptionsBase CreateOptions(string[] cmdArgsArray)
         {
             try
             {
                 return CreateOptionsByPolicy(cmdArgsArray, _creationPolicy);
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 _logger.LogError(exception);
             }
 
             throw new ApplicationException("Invalid parse cmd arguments");
         }
-
-        protected abstract OptionsBase CreateOptionsByPolicy(string[] cmdArgsArray,
-            IOptionsPolicy creationPolicy);
     }
 }
